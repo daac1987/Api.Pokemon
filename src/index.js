@@ -1,13 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import RutaBuscador from './Rutas/RutaBuscador';
+import RutaImagenes from './Rutas/RutaImagenes';
+
+const ruta = createBrowserRouter([
+  {
+    path:"/",
+    element:<RutaBuscador/>,
+  },
+  {
+    path:"/imagenes",
+    element:<RutaImagenes/>
+  }
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={ruta}/>
   </React.StrictMode>
 );
 
