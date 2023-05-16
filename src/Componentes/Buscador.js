@@ -9,12 +9,12 @@ import gmail from "../img/gmail.png";
 import youtube from "../img/youtube.png";
 import agregar from "../img/perfil.jpg";
 import cromo from "../img/pokemon-go.png";
-import { Suspense } from 'react';
 
 
 export default function Buscador() {
 
-    const [nombre, setNombre] = useState('ditto');
+    const [nombre, setNombre] = useState('pikachu');
+    const [condicion, setCondicion] = useState(false);
 
     const HandleKeyDown = (event) => {
 
@@ -26,9 +26,10 @@ export default function Buscador() {
             else {
                 setNombre(entrada.trim().toLowerCase());
                 document.getElementById("entrada").value = "";
+                setCondicion(true);
             }
         }
-        return (nombre);
+        return (nombre,condicion);
     };
 
     return (
@@ -38,7 +39,7 @@ export default function Buscador() {
                 <div className="contendor-central position-absolute top-50 start-50 translate-middle">
 
                     <div className='mb-5'>
-                        <img src={logoGoogle} className="img-fluid bg-transparent" alt="imagen" ></img>
+                    <a href="https://fontmeme.com/es/fuente-de-google/"><img src="https://fontmeme.com/permalink/230516/da5ff34a8a9761f59edcd20181b1a2db.png" alt="fuente-de-google" border="0"/></a>
                     </div>
 
                     <div class="input-group mb-3 align-items-center">
@@ -57,7 +58,7 @@ export default function Buscador() {
                     </div>
 
                     <div>
-                        <ResultadoBuscador pokemonId={nombre}></ResultadoBuscador>
+                        {condicion ? <ResultadoBuscador pokemonId={nombre}/>: <>{condicion}</>}
                     </div>
 
                 </div>

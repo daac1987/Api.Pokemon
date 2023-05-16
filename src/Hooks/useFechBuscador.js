@@ -27,6 +27,8 @@ export const useFetchBuscador = (nombre) => {
                 
                 const pok = await resultado.json();
 
+                console.log(pok)
+
                 setEstado(false);
                 setData(pok);
                 setError({ e: false })
@@ -38,7 +40,7 @@ export const useFetchBuscador = (nombre) => {
 
         }
 
-        getData(nombre,error);
+        getData(nombre);
     }, [nombre]);
 
     //devuelvo las tres constantes

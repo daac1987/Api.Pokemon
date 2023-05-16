@@ -3,21 +3,25 @@
     width: 100%;
     height: 100vh;
 }
+
 .contenedorPrincipalOscuroDos {
     background-image: url('https://mw1.google.com/mw-planetary/sky/skytiles_v1/73_27_7.jpg');
     width: 100%;
     height: 2385vh;
 }
+
 .img-perfil {
     border-radius: 50%;
     width: 35px !important;
 }
-.mantener-nav{
+
+.mantener-nav {
     position: fixed;
     top: 0;
     z-index: 1000;
     right: 0;
 }
+
 .contendor-central {
     width: 45%;
 }
@@ -48,47 +52,58 @@
     display: none;
     overflow: auto;
 }
-.contenedor-Img{
+
+.contenedor-Img {
     overflow: auto;
 }
+
 .imagen-cont:hover {
-background-image: url("../src/img/pokebola.png");
-background-repeat: no-repeat;
-background-position: center;
+    background-image: url("../src/img/pokebola.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.imagen-anim{
+
+.imagen-anim {
     height: 150px;
 }
+
 .imagen-anim:hover {
     animation: animacion 2s ease 0s 1 normal forwards;
-    
+
 }
+
+.img-buscador {
+    height: 400px;
+    width: 400px;
+}
+
 @keyframes animacion {
-	0%,
-	100% {
-		transform: translateX(0%);
-		transform-origin: 50% 50%;
-	}
 
-	15% {
-		transform: translateX(-30px) rotate(-6deg);
-	}
+    0%,
+    100% {
+        transform: translateX(0%);
+        transform-origin: 50% 50%;
+    }
 
-	30% {
-		transform: translateX(15px) rotate(6deg);
-	}
+    15% {
+        transform: translateX(-30px) rotate(-6deg);
+    }
 
-	45% {
-		transform: translateX(-15px) rotate(-3.6deg);
-	}
+    30% {
+        transform: translateX(15px) rotate(6deg);
+    }
 
-	60% {
-		transform: translateX(9px) rotate(2.4deg);
-	}
+    45% {
+        transform: translateX(-15px) rotate(-3.6deg);
+    }
 
-	75% {
-		transform: translateX(-6px) rotate(-1.2deg);
-	}
+    60% {
+        transform: translateX(9px) rotate(2.4deg);
+    }
+
+    75% {
+        transform: translateX(-6px) rotate(-1.2deg);
+    }
 }
 
 @media (max-width: 800px) {
@@ -100,7 +115,8 @@ background-position: center;
         width: 45%;
         opacity: 1.5;
     }
-    .contenedorPrincipalOscuroDos{
+
+    .contenedorPrincipalOscuroDos {
         height: inherit;
     }
 }
