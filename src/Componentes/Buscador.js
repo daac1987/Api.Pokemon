@@ -1,6 +1,6 @@
 import lupa from '../img/lupa.png';
 import microfono from '../img/microfono.png';
-import logoGoogle from '../img/logoGoogle.png';
+import perfil from '../img/pokebola.png';
 import '../estilos.css';
 import ResultadoBuscador from './ResultadoBuscador';
 import { useState } from 'react';
@@ -29,8 +29,12 @@ export default function Buscador() {
                 setCondicion(true);
             }
         }
-        return (nombre,condicion);
+        return (nombre, condicion);
     };
+
+    const guardar = () => {
+        setCondicion(false);
+    }
 
     return (
         <>
@@ -39,7 +43,7 @@ export default function Buscador() {
                 <div className="contendor-central position-absolute top-50 start-50 translate-middle">
 
                     <div className='mb-5'>
-                    <a href="https://fontmeme.com/es/fuente-de-google/"><img src="https://fontmeme.com/permalink/230516/da5ff34a8a9761f59edcd20181b1a2db.png" alt="fuente-de-google" border="0"/></a>
+                        <a href="https://fontmeme.com/es/fuente-de-google/"><img src="https://fontmeme.com/permalink/230516/da5ff34a8a9761f59edcd20181b1a2db.png" alt="fuente-de-google" border="0" /></a>
                     </div>
 
                     <div class="input-group mb-3 align-items-center">
@@ -57,8 +61,9 @@ export default function Buscador() {
 
                     </div>
 
+                    <button className="btn text-white text-decoration-none" onClick={guardar}><img src={perfil} className="img-perfil" alt="imagen"></img></button>
                     <div>
-                        {condicion ? <ResultadoBuscador pokemonId={nombre}/>: <>{condicion}</>}
+                        {condicion ? <ResultadoBuscador pokemonId={nombre} /> : <>{condicion}</>}
                     </div>
 
                 </div>

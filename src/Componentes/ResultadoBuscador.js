@@ -31,7 +31,6 @@ export default function ResultadoBuscador(nombre) {
                         <h5>Movimiento: {data.moves[0].move.name}</h5>
                         <h5>Peso : {data.weight}</h5>
                     </div>
-
                 </div>
 
             </div>
